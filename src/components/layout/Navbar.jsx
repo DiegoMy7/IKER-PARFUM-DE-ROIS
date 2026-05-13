@@ -25,24 +25,16 @@ export default function Navbar() {
 
     const previousBodyOverflow = document.body.style.overflow;
     const previousHtmlOverflow = document.documentElement.style.overflow;
-    const previousBodyPosition = document.body.style.position;
-    const previousBodyTop = document.body.style.top;
-    const previousBodyWidth = document.body.style.width;
-    const scrollY = window.scrollY;
+    const preventTouchMove = (event) => event.preventDefault();
 
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
+    document.addEventListener('touchmove', preventTouchMove, { passive: false });
 
     return () => {
+      document.removeEventListener('touchmove', preventTouchMove);
       document.documentElement.style.overflow = previousHtmlOverflow;
       document.body.style.overflow = previousBodyOverflow;
-      document.body.style.position = previousBodyPosition;
-      document.body.style.top = previousBodyTop;
-      document.body.style.width = previousBodyWidth;
-      window.scrollTo(0, scrollY);
     };
   }, [menuOpen]);
 
@@ -109,7 +101,6 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 md:hidden"
             onWheel={(e) => e.preventDefault()}
-            onTouchMove={(e) => e.preventDefault()}
           >
             <div
               className="absolute inset-0 bg-black/95 backdrop-blur-2xl"

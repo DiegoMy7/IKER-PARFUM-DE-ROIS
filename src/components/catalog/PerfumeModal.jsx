@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Clock, Flame, Calendar, MessageCircle } from 'lucide-react';
 import { modalOverlay, modalContent } from '../../animations/variants';
@@ -6,6 +6,8 @@ import { getWhatsAppLink } from '../../data/perfumes';
 
 export default function PerfumeModal({ perfume, onClose }) {
   const [imgError, setImgError] = useState(false);
+  const modalRef = useRef(null);
+  const touchStartY = useRef(0);
 
   if (!perfume) return null;
 
@@ -21,30 +23,44 @@ export default function PerfumeModal({ perfume, onClose }) {
   useEffect(() => {
     const previousBodyOverflow = document.body.style.overflow;
     const previousHtmlOverflow = document.documentElement.style.overflow;
-    const previousPosition = document.body.style.position;
-    const previousTop = document.body.style.top;
     const previousPaddingRight = document.body.style.paddingRight;
-    const previousWidth = document.body.style.width;
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    const scrollY = window.scrollY;
+
+    const handleTouchStart = (event) => {
+      touchStartY.current = event.touches[0]?.clientY || 0;
+    };
+
+    const handleTouchMove = (event) => {
+      const modal = modalRef.current;
+      if (!modal || !modal.contains(event.target)) {
+        event.preventDefault();
+        return;
+      }
+
+      const currentY = event.touches[0]?.clientY || 0;
+      const deltaY = currentY - touchStartY.current;
+      const atTop = modal.scrollTop <= 0;
+      const atBottom = modal.scrollTop + modal.clientHeight >= modal.scrollHeight - 1;
+
+      if ((atTop && deltaY > 0) || (atBottom && deltaY < 0)) {
+        event.preventDefault();
+      }
+    };
 
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
     if (scrollbarWidth > 0) {
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
       document.documentElement.style.overflow = previousHtmlOverflow;
       document.body.style.overflow = previousBodyOverflow;
-      document.body.style.position = previousPosition;
-      document.body.style.top = previousTop;
       document.body.style.paddingRight = previousPaddingRight;
-      document.body.style.width = previousWidth;
-      window.scrollTo(0, scrollY);
     };
   }, []);
 
@@ -68,7 +84,7 @@ export default function PerfumeModal({ perfume, onClose }) {
           exit="exit"
           onClick={(e) => e.stopPropagation()}
           onWheel={(e) => e.stopPropagation()}
-          onTouchMove={(e) => e.stopPropagation()}
+          ref={modalRef}
           className="relative w-full max-w-4xl max-h-[92dvh] overflow-y-auto overscroll-contain rounded-3xl glass-dark"
           style={{ boxShadow: '0 0 80px rgba(200, 169, 107, 0.15), 0 30px 60px rgba(0,0,0,0.7)' }}
         >
