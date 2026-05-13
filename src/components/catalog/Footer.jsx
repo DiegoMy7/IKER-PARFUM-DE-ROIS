@@ -5,7 +5,7 @@ import BrandMark from '../layout/BrandMark';
 
 const SOCIAL_LINKS = [
   { label: 'Instagram', href: 'https://www.instagram.com/', icon: Instagram },
-  { label: 'TikTok', href: 'https://www.tiktok.com/', icon: Music2 },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@777.iker_bt?_r=1&_t=ZS-96KwDp50OV3', icon: Music2 },
   {
     label: 'WhatsApp',
     href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaría conocer más sobre IKER PARFUM DE ROIS.')}`,
