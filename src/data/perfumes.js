@@ -468,7 +468,21 @@ export const SAMPLE_PERFUMES = [
     occasion: 'Noche, Eventos Formales',
     categories: ['arabes'],
     visible: true,
+  },
+  {
+    id: '37',
+    name: 'Summer Hammer',
+    price: 'consultar',
+    description: 'Un cóctel tropical explosivo y vibrante que captura la esencia de un verano infinito, con un mango jugoso que se mezcla con ron y notas marinas.',
+    imageUrl: '/perfumes/Summer Hammer Lorenzo Pazzaglia.jpg',
+    notes: { top: 'Mango, Piña, Coco, Ron, Flores Blancas', heart: 'Notas Marinas, Flores Blancas', base: 'Almizcle, Sándalo, Ámbar, Maderas Preciosas' },
+    longevity: '10-12 horas',
+    intensity: 5,
+    occasion: 'Día, Verano, Vacaciones',
+    categories: ['nicho'],
+    visible: true,
  }
+
 
 ];
 

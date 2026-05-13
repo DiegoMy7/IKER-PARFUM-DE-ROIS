@@ -9,17 +9,17 @@ const CATEGORIES = [
   {
     id: 'all',
     label: 'Todos',
-    description: 'La selección completa disponible ahora.',
+    description: 'La selección completa disponible para aquellos que quieren ser recordados con buen aroma.',
   },
   {
     id: 'arabes',
     label: 'Árabes',
-    description: 'Perfumes intensos, especiados, dulces y de gran duración.',
+    description: 'Perfumes intensos, especiados, dulces y fáciles de usar diario. ',
   },
   {
     id: 'disenador',
     label: 'Diseñador',
-    description: 'Fragancias reconocidas, versátiles y fáciles de usar diario.',
+    description: 'Fragancias reconocidas, versátiles y de gran duración.',
   },
   {
     id: 'nicho',

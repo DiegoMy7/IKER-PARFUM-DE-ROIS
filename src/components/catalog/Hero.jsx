@@ -100,7 +100,7 @@ export default function Hero() {
           className="mt-10 sm:mt-16 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:justify-center sm:gap-12"
         >
           {[
-            { value: '23+', label: 'Fragancias' },
+            { value: '30+', label: 'Fragancias' },
             { value: '3', label: 'Familias' },
             { value: '20h', label: 'Duración' },
           ].map((stat) => (
