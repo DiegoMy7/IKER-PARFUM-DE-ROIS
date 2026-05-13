@@ -20,6 +20,36 @@ export default function PerfumeModal({ perfume, onClose }) {
     base: 'Sándalo, Ámbar',
   };
 
+  const keepScrollInsideBounds = () => {
+    const modal = modalRef.current;
+    if (!modal || modal.scrollHeight <= modal.clientHeight) return;
+
+    if (modal.scrollTop <= 0) {
+      modal.scrollTop = 1;
+    } else if (modal.scrollTop + modal.clientHeight >= modal.scrollHeight) {
+      modal.scrollTop = modal.scrollHeight - modal.clientHeight - 1;
+    }
+  };
+
+  const handleModalTouchStart = (event) => {
+    touchStartY.current = event.touches[0]?.clientY || 0;
+    keepScrollInsideBounds();
+  };
+
+  const handleModalTouchMove = (event) => {
+    const modal = modalRef.current;
+    if (!modal) return;
+
+    const currentY = event.touches[0]?.clientY || 0;
+    const deltaY = currentY - touchStartY.current;
+    const atTop = modal.scrollTop <= 0;
+    const atBottom = modal.scrollTop + modal.clientHeight >= modal.scrollHeight - 1;
+
+    if ((atTop && deltaY > 0) || (atBottom && deltaY < 0)) {
+      event.preventDefault();
+    }
+  };
+
   useEffect(() => {
     const previousBodyOverflow = document.body.style.overflow;
     const previousHtmlOverflow = document.documentElement.style.overflow;
@@ -52,6 +82,7 @@ export default function PerfumeModal({ perfume, onClose }) {
     if (scrollbarWidth > 0) {
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
+    requestAnimationFrame(keepScrollInsideBounds);
     document.addEventListener('touchstart', handleTouchStart, { passive: true });
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
 
@@ -84,17 +115,19 @@ export default function PerfumeModal({ perfume, onClose }) {
           exit="exit"
           onClick={(e) => e.stopPropagation()}
           onWheel={(e) => e.stopPropagation()}
+          onTouchStart={handleModalTouchStart}
+          onTouchMove={handleModalTouchMove}
           ref={modalRef}
-          className="relative w-full max-w-4xl max-h-[92dvh] overflow-y-auto overscroll-contain rounded-3xl glass-dark"
+          className="modal-panel relative w-full max-w-4xl max-h-[92dvh] overflow-y-auto overscroll-contain rounded-3xl glass-dark"
           style={{ boxShadow: '0 0 80px rgba(200, 169, 107, 0.15), 0 30px 60px rgba(0,0,0,0.7)' }}
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className="fixed top-[calc(env(safe-area-inset-top)+0.75rem)] right-4 z-[120] w-12 h-12 rounded-full flex items-center justify-center bg-black/85 text-gold border border-gold/50 shadow-[0_12px_36px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:text-white sm:absolute sm:top-5 sm:right-5 sm:mr-0 sm:mb-0"
+            className="fixed top-[calc(env(safe-area-inset-top)+0.75rem)] right-4 z-[120] w-10 h-10 rounded-full flex items-center justify-center bg-black/85 text-gold border border-gold/50 shadow-[0_12px_36px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:text-white sm:absolute sm:top-5 sm:right-5 sm:mr-0 sm:mb-0 sm:w-11 sm:h-11"
             aria-label="Cerrar"
           >
-            <X size={22} strokeWidth={2.5} />
+            <X size={19} strokeWidth={2.5} />
           </button>
 
           <div className="grid md:grid-cols-2 gap-0">

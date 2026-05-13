@@ -11,14 +11,7 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
-  }, []);
 
   useEffect(() => {
     if (!menuOpen) return undefined;
@@ -52,9 +45,7 @@ export default function Navbar() {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={`site-navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'md:glass-dark md:border-b md:border-gold/10 md:shadow-[0_4px_40px_rgba(0,0,0,0.6)]' : 'md:bg-transparent md:border-b md:border-transparent'
-        }`}
+        className="site-navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">
           <Link to="/" className="select-none group">

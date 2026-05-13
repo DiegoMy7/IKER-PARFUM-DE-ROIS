@@ -64,6 +64,9 @@ export default function Catalog() {
   }, []);
 
   const activeDescription = CATEGORIES.find((category) => category.id === activeCategory)?.description;
+  const handleCategorySelect = (categoryId) => {
+    setActiveCategory(categoryId);
+  };
 
   return (
     <section id="catalog" className="relative pt-10 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 px-4 sm:px-6">
@@ -106,7 +109,11 @@ export default function Catalog() {
               return (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
+                  onPointerDown={(event) => {
+                    event.preventDefault();
+                    handleCategorySelect(category.id);
+                  }}
+                  onClick={() => handleCategorySelect(category.id)}
                   className={`mobile-category-tab flex-shrink-0 rounded-full border px-4 sm:px-5 py-2.5 font-sans text-[10px] uppercase tracking-[0.18em] transition-all duration-300 ${
                     active
                       ? 'border-gold/80 bg-gold/90 text-black shadow-[0_0_24px_rgba(200,169,107,0.2)]'
