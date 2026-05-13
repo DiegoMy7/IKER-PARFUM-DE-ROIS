@@ -19,18 +19,32 @@ export default function PerfumeModal({ perfume, onClose }) {
   };
 
   useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousPosition = document.body.style.position;
+    const previousTop = document.body.style.top;
     const previousPaddingRight = document.body.style.paddingRight;
+    const previousWidth = document.body.style.width;
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const scrollY = window.scrollY;
 
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
     if (scrollbarWidth > 0) {
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+      document.body.style.position = previousPosition;
+      document.body.style.top = previousTop;
       document.body.style.paddingRight = previousPaddingRight;
+      document.body.style.width = previousWidth;
+      window.scrollTo(0, scrollY);
     };
   }, []);
 
