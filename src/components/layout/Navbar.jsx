@@ -53,9 +53,7 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className={`site-navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'glass-dark border-b border-gold/10 shadow-[0_4px_40px_rgba(0,0,0,0.6)]'
-            : 'bg-transparent border-b border-transparent'
+          scrolled ? 'md:glass-dark md:border-b md:border-gold/10 md:shadow-[0_4px_40px_rgba(0,0,0,0.6)]' : 'md:bg-transparent md:border-b md:border-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">

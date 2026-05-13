@@ -24,6 +24,7 @@ html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+  overscroll-behavior-x: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,6 +43,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  background: var(--black);
 }
 
 section,
@@ -252,27 +255,36 @@ img {
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
   body {
     font-size: 19px;
   }
 
   .site-navbar {
     background: var(--black) !important;
-    border-bottom: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    border-radius: 0 0 18px 18px;
+    overflow: hidden;
   }
 
   .site-navbar::after {
     content: '';
     position: absolute;
-    left: 0.75rem;
-    right: 0.75rem;
-    bottom: 0;
-    height: 1px;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.5px;
+    height: 2px;
     border-radius: 999px;
-    background: linear-gradient(90deg, transparent, rgba(200,169,107,0.68), transparent);
+    background: linear-gradient(90deg, transparent 0%, rgba(226,200,152,0.92) 18%, rgba(200,169,107,0.95) 50%, rgba(226,200,152,0.92) 82%, transparent 100%);
+    box-shadow: 0 0 12px rgba(200,169,107,0.28);
     pointer-events: none;
   }
 
