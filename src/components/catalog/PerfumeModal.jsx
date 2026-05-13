@@ -56,39 +56,14 @@ export default function PerfumeModal({ perfume, onClose }) {
     const previousPaddingRight = document.body.style.paddingRight;
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
-    const handleTouchStart = (event) => {
-      touchStartY.current = event.touches[0]?.clientY || 0;
-    };
-
-    const handleTouchMove = (event) => {
-      const modal = modalRef.current;
-      if (!modal || !modal.contains(event.target)) {
-        event.preventDefault();
-        return;
-      }
-
-      const currentY = event.touches[0]?.clientY || 0;
-      const deltaY = currentY - touchStartY.current;
-      const atTop = modal.scrollTop <= 0;
-      const atBottom = modal.scrollTop + modal.clientHeight >= modal.scrollHeight - 1;
-
-      if ((atTop && deltaY > 0) || (atBottom && deltaY < 0)) {
-        event.preventDefault();
-      }
-    };
-
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
     if (scrollbarWidth > 0) {
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
     requestAnimationFrame(keepScrollInsideBounds);
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
       document.documentElement.style.overflow = previousHtmlOverflow;
       document.body.style.overflow = previousBodyOverflow;
       document.body.style.paddingRight = previousPaddingRight;

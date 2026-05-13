@@ -18,14 +18,11 @@ export default function Navbar() {
 
     const previousBodyOverflow = document.body.style.overflow;
     const previousHtmlOverflow = document.documentElement.style.overflow;
-    const preventTouchMove = (event) => event.preventDefault();
 
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
-    document.addEventListener('touchmove', preventTouchMove, { passive: false });
 
     return () => {
-      document.removeEventListener('touchmove', preventTouchMove);
       document.documentElement.style.overflow = previousHtmlOverflow;
       document.body.style.overflow = previousBodyOverflow;
     };

@@ -267,11 +267,6 @@ img {
 }
 
 @media (max-width: 640px) {
-  html,
-  body {
-    overscroll-behavior: none;
-  }
-
   body {
     font-size: 19px;
   }
