@@ -64,7 +64,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '6',
     name: 'Khamrah Dukhan',
-    price: 190,
+    price: 200,
     description: 'Una versión misteriosa y opulenta del original, donde el dulzor característico se envuelve en un velo de incienso y maderas ahumadas.',
     imageUrl: '/perfumes/Khamrah Dukhan.webp',
     notes: { top: 'Canela, Nuez moscada, Bergamota', heart: 'Dátiles, Praliné, Incienso, Azafrán', base: 'Vainilla, Humo, Ámbar, Cuero, Pachulí' },
@@ -76,7 +76,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '7',
     name: 'Odyssey Mandarin Sky Elixir Armaf',
-    price: 190,
+    price: 200,
     description: 'Una versión más intensa y profunda que el original, donde los cítricos se vuelven más densos y la base ambarada cobra un protagonismo imponente.',
     imageUrl: '/perfumes/Odyssey Mandarin Sky Elixir Armaf.webp',
     notes: { top: 'Mandarina, Naranja, Pomelo, Salvia', heart: 'Caramelo, Haba Tonka, Especias aromáticas', base: 'Ámbar, Cuero, Vetiver, Cedro' },
@@ -88,7 +88,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '8',
     name: 'Afnan 9 AM Dive Eau de Parfum',
-    price: 170,
+    price: 175,
     description: 'Una fragancia refrescante y dinámica que captura la esencia del océano, combinando notas acuáticas y cítricas con un secado amaderado muy versátil.',
     imageUrl: '/perfumes/Afnan 9 AM Dive Eau de Parfum.webp',
     notes: { top: 'Menta, Grosella negra, Limón, Pimienta rosa', heart: 'Manzana, Incienso, Cedro', base: 'Jengibre, Sándalo, Pachulí, Jazmín' },
@@ -114,7 +114,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '10',
     name: 'Odyssey Homme Armaf',
-    price: 170,
+    price: 180,
     description: 'Una fragancia oriental y seductora que destaca por su calidez ambarada y notas de iris, ofreciendo una elegancia oscura y sofisticada.',
     imageUrl: '/perfumes/odyssey homme armaf.jpeg',
     notes: { top: 'Vainilla, Ámbar', heart: 'Iris, Especias orientales', base: 'Cuero, Notas amaderadas, Jazmín' },
@@ -150,7 +150,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '13',
     name: 'Al Haramain Amber Oud Gold Edition',
-    price: 170,
+    price: 'Consultar',
     description: 'Una fragancia exuberante y lujosa de carácter gourmand, donde las notas frutales y el melón se funden con un fondo dulce de vainilla y almizcle.',
     imageUrl: '/perfumes/Al Haramain Amber Oud Gold Edition.webp',
     notes: { top: 'Bergamota, Notas verdes', heart: 'Melón, Notas dulces, Piña, Ámbar', base: 'Vainilla, Almizcle, Notas amaderadas' },
