@@ -61,10 +61,10 @@ export default function PerfumeModal({ perfume, onClose }) {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="sticky top-3 ml-auto mr-3 -mb-12 z-30 w-11 h-11 rounded-full liquid-glass flex items-center justify-center text-white hover:text-gold border border-gold/30 shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all duration-300 sm:absolute sm:top-5 sm:right-5 sm:mr-0 sm:mb-0"
+            className="fixed top-[calc(env(safe-area-inset-top)+0.75rem)] right-4 z-[120] w-12 h-12 rounded-full flex items-center justify-center bg-black/85 text-gold border border-gold/50 shadow-[0_12px_36px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:text-white sm:absolute sm:top-5 sm:right-5 sm:mr-0 sm:mb-0"
             aria-label="Cerrar"
           >
-            <X size={18} />
+            <X size={22} strokeWidth={2.5} />
           </button>
 
           <div className="grid md:grid-cols-2 gap-0">
@@ -117,18 +117,18 @@ export default function PerfumeModal({ perfume, onClose }) {
               </div>
 
               {/* Stats row */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="modal-stats grid grid-cols-3 gap-2 sm:gap-3">
                 {[
                   { icon: Clock, label: 'Duración', value: perfume.longevity || '12-16h' },
                   { icon: Flame, label: 'Intensidad', value: `${intensity}/5` },
                   { icon: Calendar, label: 'Ocasión', value: perfume.occasion?.split(',')[0] || 'Noche' },
                 ].map(({ icon: Icon, label, value }) => (
-                  <div key={label} className="glass rounded-xl p-3 text-center">
+                  <div key={label} className="glass min-w-0 rounded-xl px-2 py-3 text-center sm:p-3">
                     <Icon size={14} className="text-gold/60 mx-auto mb-1.5" />
-                    <div className="mobile-label font-sans text-[9px] tracking-[0.2em] uppercase text-white/30 mb-1">
+                    <div className="modal-stat-label font-sans text-[9px] tracking-[0.12em] uppercase text-white/35 mb-1">
                       {label}
                     </div>
-                    <div className="font-body text-base sm:text-sm text-white/80 font-medium">
+                    <div className="modal-stat-value font-body text-base sm:text-sm text-white/80 font-medium">
                       {value}
                     </div>
                   </div>
