@@ -200,7 +200,7 @@ export const SAMPLE_PERFUMES = [
   },
   {
     id: '17',
-    name: 'Scandal Pour Homme',
+    name: 'Scandal Pour Homme EDT',
     price: 'Consultar',
     description: 'Un disenador ambarado amaderado, dulce y atrevido, donde la salvia esclarea se une al haba tonka, el caramelo y el vetiver para una estela masculina y llamativa.',
     imageUrl: '/perfumes/Scandal Pour Homme.webp',
