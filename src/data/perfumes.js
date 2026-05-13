@@ -82,7 +82,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '7',
     name: 'Odyssey Mandarin Sky Elixir Armaf',
-    price: 200,
+    price: 210,
     description: 'Una versión más intensa y profunda que el original, donde los cítricos se vuelven más densos y la base ámbarada cobra un protagonismo imponente.',
     imageUrl: '/perfumes/Odyssey Mandarin Sky Elixir Armaf.webp',
     notes: { top: 'Mandarina, naranja, pomelo, salvia', heart: 'Caramelo, haba tonka, especias aromáticas', base: 'Ámbar, cuero, vetiver, cedro' },
