@@ -1,6 +1,6 @@
 # IKER PARFUM DE ROIS
 
-Catalogo web responsive para un negocio de perfumes arabes, de disenador y nicho.
+Catálogo web responsive para un negocio de perfumes árabes, de diseñador y nicho.
 
 ## Stack
 
@@ -19,7 +19,7 @@ npm run dev
 
 ## Variables de entorno
 
-Copia `.env.example` a `.env` si quieres cambiar el numero de WhatsApp localmente:
+Copia `.env.example` a `.env` si quieres cambiar el número de WhatsApp localmente:
 
 ```bash
 VITE_WHATSAPP_NUMBER=51987905831
@@ -51,7 +51,7 @@ Cada producto usa esta forma:
   notes: { top: 'Salida', heart: 'Corazon', base: 'Fondo' },
   longevity: '8-12 horas',
   intensity: 4,
-  occasion: 'Dia, Noche',
+  occasion: 'Día, Noche',
   categories: ['arabes'],
   visible: true,
 }
@@ -65,7 +65,7 @@ disenador
 nicho
 ```
 
-Un perfume puede aparecer en mas de una seccion:
+Un perfume puede aparecer en más de una sección:
 
 ```js
 categories: ['arabes', 'nicho']

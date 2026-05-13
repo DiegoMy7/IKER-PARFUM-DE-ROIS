@@ -10,7 +10,7 @@ export default function Hero() {
     document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaria conocer la coleccion de IKER PARFUM DE ROIS.')}`;
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaría conocer la colección de IKER PARFUM DE ROIS.')}`;
 
   return (
     <section
@@ -45,7 +45,7 @@ export default function Hero() {
         >
           <div className="divider-gold w-12 sm:w-16" />
           <span className="mobile-label font-sans text-gold/80 text-[10px] sm:text-xs tracking-[0.28em] sm:tracking-[0.35em] uppercase">
-            Arabes · Disenador · Fragancias selectas
+            Árabes · Diseñador · Fragancias selectas
           </span>
           <div className="divider-gold w-12 sm:w-16" />
         </motion.div>
@@ -67,8 +67,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mobile-copy font-body text-base sm:text-xl text-white/50 max-w-2xl mx-auto mb-9 sm:mb-12 leading-relaxed italic"
         >
-          Perfumes arabes, de disenador y fragancias para cada estilo,
-          elegidos para dejar presencia desde la primera impresion.
+          Perfumes árabes, de diseñador y fragancias para cada estilo,
+          elegidos para dejar presencia desde la primera impresión.
         </motion.p>
 
         <motion.div
@@ -81,7 +81,7 @@ export default function Hero() {
             onClick={scrollToCatalog}
             className="btn-gold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full w-full max-w-xs sm:w-auto sm:min-w-[220px]"
           >
-            Explorar Coleccion
+            Explorar Colección
           </button>
           <a
             href={whatsappLink}
@@ -102,7 +102,7 @@ export default function Hero() {
           {[
             { value: '23+', label: 'Fragancias' },
             { value: '3', label: 'Familias' },
-            { value: '20h', label: 'Duracion' },
+            { value: '20h', label: 'Duración' },
           ].map((stat) => (
             <div key={stat.label} className="text-center min-w-0">
               <div className="font-display text-2xl sm:text-3xl font-semibold text-gold-gradient">

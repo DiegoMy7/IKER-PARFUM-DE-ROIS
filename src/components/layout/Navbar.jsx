@@ -6,7 +6,7 @@ import BrandMark from './BrandMark';
 
 const NAV_LINKS = [
   { label: 'Inicio', href: '/#hero' },
-  { label: 'Coleccion', href: '/#catalog' },
+  { label: 'Colección', href: '/#catalog' },
   { label: 'Contacto', href: '/#contact' },
 ];
 

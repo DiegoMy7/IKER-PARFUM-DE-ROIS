@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { staggerContainer } from '../../animations/variants';
 import { usePerfumes } from '../../hooks/usePerfumes';
@@ -9,22 +9,22 @@ const CATEGORIES = [
   {
     id: 'all',
     label: 'Todos',
-    description: 'La seleccion completa disponible ahora.',
+    description: 'La selección completa disponible ahora.',
   },
   {
     id: 'arabes',
-    label: 'Arabes',
-    description: 'Perfumes intensos, especiados, dulces y de gran duracion.',
+    label: 'Árabes',
+    description: 'Perfumes intensos, especiados, dulces y de gran duración.',
   },
   {
     id: 'disenador',
-    label: 'Disenador',
-    description: 'Fragancias reconocidas, versatiles y faciles de usar diario.',
+    label: 'Diseñador',
+    description: 'Fragancias reconocidas, versátiles y fáciles de usar diario.',
   },
   {
     id: 'nicho',
     label: 'Nicho',
-    description: 'Perfiles menos comunes, con caracter y firma propia.',
+    description: 'Perfiles menos comunes, con carácter y firma propia.',
   },
 ];
 
@@ -88,15 +88,15 @@ export default function Catalog() {
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-5 sm:mb-6">
             <div className="divider-gold w-12 sm:w-20" />
             <span className="mobile-label font-sans text-gold/60 text-[10px] sm:text-xs tracking-[0.35em] uppercase">
-              Coleccion por familias
+              Colección por familias
             </span>
             <div className="divider-gold w-12 sm:w-20" />
           </div>
           <h2 className="font-display text-4xl sm:text-6xl font-semibold text-white mb-5 leading-tight">
-            Nuestra <span className="text-gold-gradient italic">Coleccion</span>
+            Nuestra <span className="text-gold-gradient italic">Colección</span>
           </h2>
           <p className="mobile-copy font-body text-base sm:text-lg text-white/40 max-w-2xl mx-auto italic leading-relaxed">
-            Fragancias arabes, de disenador y nicho para elegir por ocasion,
+            Fragancias árabes, de diseñador y nicho para elegir por ocasión,
             personalidad y presencia.
           </p>
         </motion.div>
@@ -167,11 +167,11 @@ export default function Catalog() {
             className="glass rounded-2xl px-6 py-12 text-center max-w-xl mx-auto"
           >
             <div className="font-display text-3xl text-gold-gradient mb-3">
-              Proximamente
+              Próximamente
             </div>
             <p className="mobile-copy font-body text-white/45 italic leading-relaxed">
-              Esta familia ya esta preparada en la web. Cuando agregues productos de esta categoria,
-              apareceran aqui automaticamente.
+              Esta familia ya está preparada en la web. Cuando agregues productos de esta categoría,
+              aparecerán aquí automáticamente.
             </p>
           </motion.div>
         )}
@@ -185,7 +185,7 @@ export default function Catalog() {
         >
           <div className="divider-gold max-w-xs mx-auto" />
           <p className="mobile-label font-sans text-[10px] tracking-[0.35em] uppercase text-white/20 mt-5">
-            Seleccion curada · Consultas por WhatsApp
+            Selección curada · Consultas por WhatsApp
           </p>
         </motion.div>
       </div>

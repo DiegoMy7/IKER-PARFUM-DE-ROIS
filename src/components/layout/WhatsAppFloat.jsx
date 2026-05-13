@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { WHATSAPP_NUMBER } from '../../data/perfumes';
 
 export default function WhatsAppFloat() {
-  const link = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaria conocer mas sobre IKER PARFUM DE ROIS y su coleccion de perfumes.')}`;
+  const link = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaría conocer más sobre IKER PARFUM DE ROIS y su colección de perfumes.')}`;
 
   return (
     <motion.a

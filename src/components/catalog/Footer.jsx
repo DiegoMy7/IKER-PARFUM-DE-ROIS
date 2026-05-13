@@ -8,14 +8,14 @@ const SOCIAL_LINKS = [
   { label: 'TikTok', href: 'https://www.tiktok.com/', icon: Music2 },
   {
     label: 'WhatsApp',
-    href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaria conocer mas sobre IKER PARFUM DE ROIS.')}`,
+    href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, me gustaría conocer más sobre IKER PARFUM DE ROIS.')}`,
     icon: MessageCircle,
   },
 ];
 
 const FOOTER_CATEGORIES = [
-  ['arabes', 'Arabes'],
-  ['disenador', 'Disenador'],
+  ['arabes', 'Árabes'],
+  ['disenador', 'Diseñador'],
   ['nicho', 'Nicho'],
 ];
 
@@ -49,7 +49,7 @@ export default function Footer() {
               Listo para tu <span className="text-gold-gradient italic">fragancia</span>?
             </h2>
             <p className="mobile-copy mx-auto mb-7 max-w-2xl font-body text-base italic leading-relaxed text-white/45 sm:text-lg">
-              Contactanos por WhatsApp para asesoria personalizada, disponibilidad y recomendaciones segun tu estilo.
+              Contáctanos por WhatsApp para asesoría personalizada, disponibilidad y recomendaciones según tu estilo.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
               <a
@@ -63,7 +63,7 @@ export default function Footer() {
               </a>
               <div className="mobile-label inline-flex items-center justify-center gap-2 font-sans text-sm font-medium tracking-[0.08em] text-white/45 sm:text-xs">
                 <Phone size={16} className="text-gold/70" />
-                <span>Numero directo: {WHATSAPP_DISPLAY_NUMBER}</span>
+              <span>Número directo: {WHATSAPP_DISPLAY_NUMBER}</span>
               </div>
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ export default function Footer() {
             <div className="space-y-5">
               <BrandMark size="sm" />
               <p className="mobile-copy max-w-sm font-body text-sm italic leading-relaxed text-white/45">
-                Perfumes arabes, de disenador y nicho seleccionados para encontrar una firma personal con presencia, elegancia y buena duracion.
+                Perfumes árabes, de diseñador y nicho seleccionados para encontrar una firma personal con presencia, elegancia y buena duración.
               </p>
               <div className="flex items-center gap-3">
                 {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
@@ -96,7 +96,7 @@ export default function Footer() {
 
             <div>
               <h3 className="mobile-label mb-4 font-sans text-[10px] uppercase tracking-[0.28em] text-gold/70">
-                Coleccion
+                Colección
               </h3>
               <div className="flex flex-col items-start gap-3">
                 {FOOTER_CATEGORIES.map(([id, label]) => (
@@ -122,7 +122,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock size={15} className="text-gold/65" />
-                  <span>Respuesta durante el dia</span>
+                  <span>Respuesta durante el día</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <ShieldCheck size={15} className="text-gold/65" />
@@ -143,7 +143,7 @@ export default function Footer() {
                 </span>
               </div>
               <p className="mobile-copy font-body text-sm italic leading-relaxed text-white/50">
-                Si no sabes cual elegir, escribe tu estilo, presupuesto y ocasion. Te guiamos hacia una opcion arabe, disenador o nicho.
+                Si no sabes cuál elegir, escribe tu estilo, presupuesto y ocasión. Te guiamos hacia una opción árabe, diseñador o nicho.
               </p>
               <a
                 href={whatsappLink}
