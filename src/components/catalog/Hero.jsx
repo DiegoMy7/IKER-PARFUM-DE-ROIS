@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { BadgeCheck, ChevronDown } from 'lucide-react';
 import { WHATSAPP_NUMBER } from '../../data/perfumes';
 
 export default function Hero() {
@@ -65,11 +65,25 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mobile-copy font-body text-base sm:text-xl text-white/50 max-w-2xl mx-auto mb-9 sm:mb-12 leading-relaxed italic"
+          className="mobile-copy font-body text-base sm:text-xl text-white/50 max-w-2xl mx-auto mb-6 sm:mb-7 leading-relaxed italic"
         >
           Perfumes árabes, de diseñador y fragancias para cada estilo,
           elegidos para dejar presencia desde la primera impresión.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.82 }}
+          className="mb-6 sm:mb-8 flex justify-center"
+        >
+          <div className="liquid-glass inline-flex items-center gap-2 rounded-full border border-gold/35 px-4 py-2 shadow-[0_16px_40px_rgba(0,0,0,0.28)]">
+            <BadgeCheck size={16} className="text-gold" strokeWidth={1.8} />
+            <span className="mobile-label font-sans text-[11px] sm:text-xs font-semibold tracking-[0.24em] uppercase text-gold">
+              100% Original
+            </span>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,9 +114,9 @@ export default function Hero() {
           className="mt-10 sm:mt-16 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:justify-center sm:gap-12"
         >
           {[
-            { value: '30+', label: 'Fragancias' },
+            { value: '37+', label: 'Fragancias' },
             { value: '3', label: 'Familias' },
-            { value: '20h', label: 'Duración' },
+            { value: '100%', label: 'Original' },
           ].map((stat) => (
             <div key={stat.label} className="text-center min-w-0">
               <div className="font-display text-2xl sm:text-3xl font-semibold text-gold-gradient">

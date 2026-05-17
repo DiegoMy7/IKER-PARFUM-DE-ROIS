@@ -4,7 +4,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '1',
     name: 'Khamrah Qahwa Eau De Parfum',
-    price: 170,
+    price: 'Consultar',
     description: 'Una variante sofisticada del icónico Khamrah, que añade una nota de café tostado a su base cálida y especiada para una experiencia gourmet profunda.',
     imageUrl: '/perfumes/Khamrah Qahwa Eau De Parfum.webp',
     notes: { top: 'Canela, cardamomo, jengibre', heart: 'Café tostado, praliné, frutas confitadas, flores blancas', base: 'Vainilla, haba tonka, benjuí, ámbar, almizcle' },
@@ -17,7 +17,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '2',
     name: 'Asad Bourbon',
-    price: 170,
+    price: 'Consultar',
     description: 'Una interpretación sublime y ahumada del ADN original, con toques de vainilla bourbon y especias que evocan una masculinidad refinada y nocturna.',
     imageUrl: '/perfumes/Asad Bourbon.webp',
     notes: { top: 'Pimienta negra, piña, cardamomo', heart: 'Pachulí, café, iris', base: 'Vainilla bourbon, ámbar, benjuí, madera de roble' },
@@ -30,7 +30,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '3',
     name: 'Odyssey Mandarin Sky',
-    price: 170,
+    price: 'Consultar',
     description: 'Una explosión cítrica y dulce que combina la frescura de la mandarina con un fondo de caramelo y maderas, inspirada en la energía del atardecer.',
     imageUrl: '/perfumes/Odyssey Mandarin Sky.webp',
     notes: { top: 'Mandarina, naranja, azafrán, salvia', heart: 'Caramelo, haba tonka, tagetes', base: 'Ambroxan, vetiver, cedro' },
@@ -43,7 +43,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '4',
     name: 'Afnan 9 PM Eau de Parfum',
-    price: 170,
+    price: 'Consultar',
     description: 'Una fragancia vibrante y seductora con una apertura frutal que evoluciona hacia un fondo cálido de vainilla, ideal para destacar en la vida nocturna.',
     imageUrl: '/perfumes/Afnan 9 PM Eau de Parfum.webp',
     notes: { top: 'Manzana, canela, lavanda silvestre, bergamota', heart: 'Flor de azahar del naranjo, lirio de los valles', base: 'Vainilla, haba tonka, ámbar, pachulí' },
@@ -56,7 +56,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '5',
     name: 'Khamrah Eau De Parfum',
-    price: 170,
+    price: 'Consultar',
     description: 'Un elixir lujoso y envolvente que combina notas dulces de dátiles y praliné con un fondo ambarado, creando una estela cálida y adictiva.',
     imageUrl: '/perfumes/Khamrah Eau De Parfum.webp',
     notes: { top: 'Canela, nuez moscada, bergamota', heart: 'Dátiles, praliné, nardo, mahonial', base: 'Vainilla, haba tonka, benjuí, ámbar, mirra, madera de akigala' },
@@ -69,7 +69,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '6',
     name: 'Lattafa Khamrah Dukhan',
-    price: 190,
+    price: 'Consultar',
     description: 'Un gourmand ahumado y especiado inspirado en el ritual oriental del dukhan: mandarina, pimento e incienso sobre tabaco, ámbar, tonka y praliné.',
     imageUrl: '/perfumes/Khamrah Dukhan.webp',
     notes: { top: 'Mandarina, pimento, especias ahumadas', heart: 'Cistus, flor de naranjo, incienso, pachulí', base: 'Tabaco, ámbar, haba tonka, benjuí, praliné' },
@@ -82,7 +82,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '7',
     name: 'Odyssey Mandarin Sky Elixir Armaf',
-    price: 210,
+    price: 'Consultar',
     description: 'Una versión más intensa y profunda que el original, donde los cítricos se vuelven más densos y la base ámbarada cobra un protagonismo imponente.',
     imageUrl: '/perfumes/Odyssey Mandarin Sky Elixir Armaf.webp',
     notes: { top: 'Mandarina, naranja, pomelo, salvia', heart: 'Caramelo, haba tonka, especias aromáticas', base: 'Ámbar, cuero, vetiver, cedro' },
@@ -95,7 +95,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '8',
     name: 'Afnan 9 AM Dive Eau de Parfum',
-    price: 175,
+    price: 'Consultar',
     description: 'Una fragancia refrescante y dinámica que captura la esencia del océano, combinando notas acuáticas y cítricas con un secado amaderado muy versátil.',
     imageUrl: '/perfumes/Afnan 9 AM Dive Eau de Parfum.webp',
     notes: { top: 'Menta, grosella negra, limón, pimienta rosa', heart: 'Manzana, incienso, cedro', base: 'Jengibre, sándalo, pachulí, jazmín' },
@@ -108,7 +108,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '9',
     name: 'Badee Al Oud Sublime Lattafa',
-    price: 170,
+    price: 'Consultar',
     description: 'Una fragancia frutal, fresca y brillante, con manzana, lichi y rosa al inicio; ciruela y jazmín al centro; y una base de vainilla, musgo y pachulí.',
     imageUrl: '/perfumes/Badee Al Oud Sublime Eau De Parfum.webp',
     notes: { top: 'Manzana, lichi, rosa', heart: 'Ciruela, jazmín', base: 'Vainilla, musgo, pachulí' },
@@ -121,7 +121,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '10',
     name: 'Odyssey Homme Armaf',
-    price: 180,
+    price: 'Consultar',
     description: 'Una fragancia oriental y seductora que destaca por su calidez ámbarada y notas de iris, ofreciendo una elegancia oscura y sofisticada.',
     imageUrl: '/perfumes/odyssey homme armaf.jpeg',
     notes: { top: 'Vainilla, ámbar', heart: 'Iris, especias orientales', base: 'Cuero, notas amaderadas, jazmín' },
@@ -134,7 +134,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '11',
     name: 'Sceptre Malachite Maison Alhambra',
-    price: 170,
+    price: 'Consultar',
     description: 'Una fragancia opulenta y mística inspirada en la gema malaquita, que equilibra notas especiadas de azafrán con la profundidad terrosa del oud y maderas nobles.',
     imageUrl: '/perfumes/Sceptre Malachite Maison Alhambra.webp',
     notes: { top: 'Azafrán, nuez moscada, lavanda', heart: 'Oud, notas amaderadas', base: 'Pachulí, almizcle' },
@@ -147,7 +147,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '12',
     name: 'Asad Eau De Parfum',
-    price: 170,
+    price: 'Consultar',
     description: 'Una fragancia audaz y especiada con una apertura vibrante de pimienta negra que se asienta en un fondo cálido de vainilla y ámbar.',
     imageUrl: '/perfumes/Asad Eau De Parfum.webp',
     notes: { top: 'Pimienta negra, piña, tabaco', heart: 'Café, iris, pachulí', base: 'Vainilla, ámbar, madera seca, benjuí, ládano' },
@@ -303,7 +303,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '24',
     name: 'Hawas Ice Rasasi',
-    price: 170,
+    price: 'Consultar',
     description: 'Una versión más fría, fresca y cristalina del ADN Hawas: manzana helada, cítricos y anis se mezclan con ciruela, flor de naranjo y una base marina-amaderada.',
     imageUrl: '/perfumes/Hawas Ice Rasasi.webp',
     notes: { top: 'Manzana helada, limón italiano, bergamota siciliana, anis estrellado', heart: 'Ciruela, flor de naranjo, cardamomo, acorde marino helado', base: 'Almizcle, ámbar, madera flotante, musgo cristalizado' },
@@ -316,7 +316,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '25',
     name: 'Hawas Malibu Rasasi',
-    price: 210,
+    price: 'Consultar',
     description: 'Un Hawas tropical y luminoso, con piña, naranja y pomelo en la salida, un corazón ambarado con lavanda e iris, y un fondo dulce-musculoso de tonka y cashmeran.',
     imageUrl: '/perfumes/Hawas Malibu Rasasi.webp',
     notes: { top: 'Piña, naranja, pomelo', heart: 'Ámbar, iris, lavanda', base: 'Haba tonka, almizcle, cashmeran, pachulí' },
@@ -342,7 +342,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '27',
     name: 'Badee Al Oud Honor & Glory Lattafa',
-    price: 170,
+    price: 'Consultar',
     description: 'Una mezcla cremosa y exótica: piña con creme brulee, especias suaves en el corazón y una base de vainilla, sándalo, cashmeran y musgo.',
     imageUrl: '/perfumes/Badee Al Oud Honor & Glory Lattafa.webp',
     notes: { top: 'Piña, creme brulee', heart: 'Canela, cúrcuma, pimienta negra, benjuí', base: 'Vainilla, sándalo, cashmeran, musgo' },
@@ -355,7 +355,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '28',
     name: 'Hawas Fire Rasasi',
-    price: 210,
+    price: 'Consultar',
     description: 'Una lectura más intensa y dulce de la línea Hawas, con salida cítrica-especiada, cuerpo aromático y un fondo cálido de ámbar, maderas y almizcle.',
     imageUrl: '/perfumes/Hawas Fire Rasasi.webp',
     notes: { top: 'Bergamota, manzana, especias brillantes', heart: 'Lavanda, notas aromáticas, maderas suaves', base: 'Ámbar, almizcle, maderas cálidas' },
@@ -368,7 +368,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '29',
     name: 'Odyssey Aqua Armaf',
-    price: 215,
+    price: 'Consultar',
     description: 'Un aromático acuático fresco y moderno, con naranja, pomelo y artemisia; un corazón de menta y lavanda; y una base limpia de ambroxan, ciprés y pachulí.',
     imageUrl: '/perfumes/Odyssey Aqua Armaf.webp',
     notes: { top: 'Naranja, pomelo, artemisia', heart: 'Menta, lavanda', base: 'Ambroxan, ciprés, pachulí' },
@@ -381,7 +381,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '30',
     name: '9PM Elixir Afnan',
-    price: 215,
+    price: 'Consultar',
     description: 'Una evolución especiada y nocturna de 9PM, con nuez moscada, elemi y cardamomo sobre cuero, lavandin y una base cremosa de vainilla, ládano y pachulí.',
     imageUrl: '/perfumes/9PM Elixir Afnan.webp',
     notes: { top: 'Nuez moscada, elemi, cardamomo', heart: 'Pimento, lavandin, cuero', base: 'Cistus, ládano, pachulí, vainilla' },
@@ -446,7 +446,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '35',
     name: 'Champion Money Fragrance World ',
-    price: 'consultar',
+    price: 'Consultar',
     description: 'Una fragancia que irradia poder y éxito, con una apertura aromática fresca que evoluciona hacia un corazón clásico y un fondo cálido y seductor.',
     imageUrl: '/perfumes/Champion Money Fragrance World.webp',
     notes: { top: 'Bergamota, Artemisia', heart: 'Lavanda, Benjuí', base: 'Vainilla, Haba Tonka' },
@@ -472,7 +472,7 @@ export const SAMPLE_PERFUMES = [
   {
     id: '37',
     name: 'Summer Hammer',
-    price: 'consultar',
+    price: 'Consultar',
     description: 'Un cóctel tropical explosivo y vibrante que captura la esencia de un verano infinito, con un mango jugoso que se mezcla con ron y notas marinas.',
     imageUrl: '/perfumes/Summer Hammer Lorenzo Pazzaglia.jpg',
     notes: { top: 'Mango, Piña, Coco, Ron, Flores Blancas', heart: 'Notas Marinas, Flores Blancas', base: 'Almizcle, Sándalo, Ámbar, Maderas Preciosas' },
