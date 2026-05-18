@@ -4,7 +4,7 @@ import { WHATSAPP_DISPLAY_NUMBER, WHATSAPP_NUMBER } from '../../data/perfumes';
 import BrandMark from '../layout/BrandMark';
 
 const SOCIAL_LINKS = [
-  { label: 'Instagram', href: 'https://www.instagram.com/', icon: Instagram },
+  { label: 'Instagram', href: 'https://www.instagram.com/iker_parfumderois?igsh=MTlkNm1rbWY4ZGY3Zw%3D%3D&utm_source=qr', icon: Instagram },
   { label: 'TikTok', href: 'https://www.tiktok.com/@777.iker_bt?_r=1&_t=ZS-96KwDp50OV3', icon: Music2 },
   {
     label: 'WhatsApp',
