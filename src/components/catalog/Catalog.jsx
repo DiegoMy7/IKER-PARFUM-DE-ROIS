@@ -22,6 +22,11 @@ const CATEGORIES = [
     description: 'Fragancias reconocidas, versátiles y de gran duración.',
   },
   {
+    id: 'mujer',
+    label: 'Mujer',
+    description: 'Fragancias femeninas, dulces, florales y elegantes para dejar una firma delicada o intensa.',
+  },
+  {
     id: 'nicho',
     label: 'Nicho',
     description: 'Perfiles menos comunes, con carácter y firma propia.',
@@ -150,7 +155,7 @@ export default function Catalog() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-50px' }}
-            className="perfume-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 sm:gap-6"
+            className="perfume-grid grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6"
           >
             {filteredPerfumes.map((p) => (
               <PerfumeCard

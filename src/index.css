@@ -308,10 +308,10 @@ img {
   }
 
   .mobile-category-tab {
-    font-size: 0.69rem !important;
+    font-size: 0.58rem !important;
     line-height: 1.35 !important;
-    letter-spacing: 0.06em !important;
-    padding: 0.72rem 0.58rem !important;
+    letter-spacing: 0.035em !important;
+    padding: 0.58rem 0.42rem !important;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -328,9 +328,28 @@ img {
   }
 
   .category-scroll {
-    gap: 0.01rem !important;
-    padding: 0.45rem 0.78rem 0.45rem 0.48rem !important;
+    gap: 0.04rem !important;
+    padding: 0.42rem 0.52rem !important;
     overflow-x: visible !important;
+  }
+
+  .perfume-grid > article {
+    contain-intrinsic-size: 360px;
+  }
+
+  .card-copy {
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .card-label {
+    line-height: 1.15 !important;
+  }
+
+  .intensity-dot {
+    width: 6px;
+    height: 6px;
   }
 
   .modal-stats {
