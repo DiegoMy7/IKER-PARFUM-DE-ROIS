@@ -1,6 +1,6 @@
 import { SAMPLE_PERFUMES } from '../data/perfumes';
 
-const STORAGE_KEY = 'iker-parfum-de-rois-perfumes-v5';
+const STORAGE_KEY = 'iker-parfum-de-rois-perfumes-v6';
 
 function clonePerfumes(perfumes) {
   return perfumes.map((perfume) => ({ ...perfume, notes: { ...(perfume.notes || {}) } }));

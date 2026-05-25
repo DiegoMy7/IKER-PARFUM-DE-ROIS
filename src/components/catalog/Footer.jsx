@@ -16,7 +16,7 @@ const SOCIAL_LINKS = [
 const FOOTER_CATEGORIES = [
   ['arabes', 'Árabes'],
   ['disenador', 'Diseñador'],
-  ['mujer', 'Mujer'],
+  ['damas', 'Damas'],
   ['nicho', 'Nicho'],
 ];
 

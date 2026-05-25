@@ -22,8 +22,8 @@ const CATEGORIES = [
     description: 'Fragancias reconocidas, versátiles y de gran duración.',
   },
   {
-    id: 'mujer',
-    label: 'Mujer',
+    id: 'damas',
+    label: 'Damas',
     description: 'Fragancias femeninas, dulces, florales y elegantes para dejar una firma delicada o intensa.',
   },
   {
@@ -101,7 +101,7 @@ export default function Catalog() {
             Nuestra <span className="text-gold-gradient italic">Colección</span>
           </h2>
           <p className="mobile-copy font-body text-base sm:text-lg text-white/40 max-w-2xl mx-auto italic leading-relaxed">
-            Fragancias árabes, de diseñador y nicho para elegir por ocasión,
+            Fragancias árabes, de diseñador, nicho y damas para elegir por ocasión,
             personalidad y presencia.
           </p>
         </motion.div>
