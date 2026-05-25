@@ -748,7 +748,7 @@ export const SAMPLE_PERFUMES = [
     name: 'Zadig & Voltaire This Is Her!',
     price: 'Consultar',
     description: 'Un diseñador femenino cremoso, limpio y elegante, con pimienta rosa y jazmín sobre un corazón gourmand de crema batida, vainilla y castaña, terminado en sándalo.',
-    imageUrl: '/perfumes/Zadig & Voltaire This Is Her.webp',
+    imageUrl: '/perfumes/Zadig & Voltaire This Is Her.png',
     notes: { top: 'Pimienta rosa, flor de árbol de seda, jazmín sambac', heart: 'Crema batida, vainilla, castaña', base: 'Sándalo, madera de cachemira' },
     longevity: '7-9 horas',
     intensity: 4,
