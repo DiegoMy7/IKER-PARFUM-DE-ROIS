@@ -308,29 +308,35 @@ img {
   }
 
   .mobile-category-tab {
-    font-size: 0.58rem !important;
+    width: 100%;
+    min-width: 0;
+    font-size: 0.56rem !important;
     line-height: 1.35 !important;
-    letter-spacing: 0.035em !important;
-    padding: 0.58rem 0.42rem !important;
+    letter-spacing: 0.02em !important;
+    padding: 0.62rem 0.22rem !important;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     cursor: pointer;
+    white-space: nowrap;
   }
 
   .mobile-category-tab span {
-    margin-left: 0.2rem !important;
-    margin-right: 0.02rem !important;
+    margin-left: 0.16rem !important;
+    margin-right: 0 !important;
   }
 
   .category-count {
-    font-size: 0.6rem !important;
+    font-size: 0.54rem !important;
   }
 
   .category-scroll {
-    gap: 0.04rem !important;
-    padding: 0.42rem 0.52rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.08rem !important;
+    padding: 0.5rem !important;
     overflow-x: visible !important;
+    border-radius: 999px;
   }
 
   .perfume-grid > article {

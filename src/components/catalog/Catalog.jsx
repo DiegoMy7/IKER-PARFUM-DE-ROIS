@@ -107,7 +107,7 @@ export default function Catalog() {
         </motion.div>
 
         <div className="mb-8 sm:mb-12">
-          <div className="category-scroll liquid-glass mx-auto flex w-fit max-w-[calc(100vw-2rem)] gap-2 overflow-x-auto rounded-full p-1.5 sm:max-w-fit sm:justify-center sm:flex-wrap">
+          <div className="category-scroll liquid-glass mx-auto flex w-full max-w-[calc(100vw-2rem)] gap-2 overflow-x-auto rounded-full p-1.5 sm:w-fit sm:max-w-fit sm:justify-center sm:flex-wrap">
             {CATEGORIES.map((category) => {
               const count = categoryCounts[category.id] || 0;
               const active = activeCategory === category.id;
@@ -119,7 +119,7 @@ export default function Catalog() {
                     handleCategorySelect(category.id);
                   }}
                   onClick={() => handleCategorySelect(category.id)}
-                  className={`mobile-category-tab flex-shrink-0 rounded-full border px-4 sm:px-5 py-2.5 font-sans text-[10px] uppercase tracking-[0.18em] transition-all duration-300 ${
+                  className={`mobile-category-tab inline-flex min-w-0 items-center justify-center rounded-full border px-4 py-2.5 font-sans text-[10px] uppercase tracking-[0.18em] transition-all duration-300 sm:flex-shrink-0 sm:px-5 ${
                     active
                       ? 'border-gold/80 bg-gold/90 text-black shadow-[0_0_24px_rgba(200,169,107,0.2)]'
                       : 'border-transparent bg-white/[0.025] text-white/45 hover:bg-white/[0.06] hover:text-gold'
