@@ -33,7 +33,7 @@ export default function PerfumeCard({ perfume, onClick }) {
         {imgError ? (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="mb-2 font-arabic text-4xl text-gold/30">عطر</div>
+              <div className="mb-2 font-display text-4xl text-gold/30">IKER</div>
               <div className="font-sans text-xs uppercase tracking-widest text-white/20">
                 IKER PARFUM DE ROIS
               </div>
@@ -77,9 +77,9 @@ export default function PerfumeCard({ perfume, onClick }) {
           {perfume.description}
         </p>
 
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex min-w-0 items-center gap-1 sm:gap-1.5">
-            <span className="card-label mr-1 hidden font-sans text-[8px] uppercase tracking-[0.12em] text-white/30 min-[380px]:inline sm:text-[10px] sm:tracking-[0.18em]">
+        <div className="card-actions flex min-h-[2.35rem] flex-col items-start justify-end gap-1.5 min-[430px]:flex-row min-[430px]:items-center min-[430px]:justify-between min-[430px]:gap-2 sm:flex-row sm:gap-2">
+          <div className="card-intensity flex min-w-0 items-center gap-1 sm:gap-1.5">
+            <span className="card-label mr-1 font-sans text-[8px] uppercase tracking-[0.12em] text-white/30 sm:text-[10px] sm:tracking-[0.18em]">
               Intensidad
             </span>
             {Array.from({ length: 5 }).map((_, i) => (
@@ -90,10 +90,10 @@ export default function PerfumeCard({ perfume, onClick }) {
             ))}
           </div>
           <motion.span
-            className="card-label whitespace-nowrap font-sans text-[8px] uppercase tracking-[0.12em] text-gold/60 transition-colors duration-300 group-hover:text-gold sm:text-[10px] sm:tracking-[0.2em]"
+            className="card-more-label self-end whitespace-nowrap font-sans text-[8px] uppercase tracking-[0.12em] text-gold/60 transition-colors duration-300 group-hover:text-gold min-[430px]:self-auto sm:text-[10px] sm:tracking-[0.2em]"
             whileHover={{ x: 2 }}
           >
-            Ver más →
+            {'Ver m\u00e1s \u2192'}
           </motion.span>
         </div>
       </div>

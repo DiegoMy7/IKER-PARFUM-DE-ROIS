@@ -24,6 +24,7 @@ html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
   overscroll-behavior-x: none;
 }
 
@@ -32,6 +33,7 @@ body {
   color: #F5F0E8;
   font-family: 'Cormorant Garamond', Georgia, serif;
   overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   overscroll-behavior-x: none;
@@ -43,6 +45,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
   background: var(--black);
 }
 
@@ -210,7 +213,14 @@ main {
 .category-scroll {
   scrollbar-width: none;
   scroll-padding-inline: 0.75rem;
-  touch-action: manipulation;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+
+.category-scroll-wrap {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .category-scroll::-webkit-scrollbar {
@@ -307,13 +317,37 @@ img {
     letter-spacing: 0.15em !important;
   }
 
+  .category-scroll-wrap::before,
+  .category-scroll-wrap::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    z-index: 2;
+    width: 2rem;
+    pointer-events: none;
+  }
+
+  .category-scroll-wrap::before {
+    left: 0;
+    border-radius: 999px 0 0 999px;
+    background: linear-gradient(90deg, rgba(11,11,11,0.74), rgba(11,11,11,0));
+  }
+
+  .category-scroll-wrap::after {
+    right: 0;
+    border-radius: 0 999px 999px 0;
+    background: linear-gradient(270deg, rgba(11,11,11,0.74), rgba(11,11,11,0));
+  }
+
   .mobile-category-tab {
-    width: 100%;
-    min-width: 0;
-    font-size: 0.56rem !important;
+    flex: 0 0 auto;
+    min-width: max-content;
+    font-size: 0.70rem !important;
     line-height: 1.35 !important;
-    letter-spacing: 0.02em !important;
-    padding: 0.62rem 0.22rem !important;
+    letter-spacing: 0.055em !important;
+    padding: 0.68rem 0.86rem !important;
+    scroll-snap-align: center;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -322,21 +356,26 @@ img {
   }
 
   .mobile-category-tab span {
-    margin-left: 0.16rem !important;
+    margin-left: 0.24rem !important;
     margin-right: 0 !important;
   }
 
   .category-count {
-    font-size: 0.54rem !important;
+    font-size: 0.62rem !important;
   }
 
   .category-scroll {
-    display: grid !important;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0.08rem !important;
-    padding: 0.5rem !important;
-    overflow-x: visible !important;
+    display: flex !important;
+    gap: 0.38rem !important;
+    padding: 0.48rem 1rem !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
     border-radius: 999px;
+    scroll-padding-inline: 1rem;
+    scroll-snap-type: x proximity;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .perfume-grid > article {

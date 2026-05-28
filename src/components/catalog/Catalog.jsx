@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { staggerContainer } from '../../animations/variants';
 import { usePerfumes } from '../../hooks/usePerfumes';
@@ -37,6 +37,7 @@ export default function Catalog() {
   const { perfumes, loading } = usePerfumes();
   const [selected, setSelected] = useState(null);
   const [activeCategory, setActiveCategory] = useState('all');
+  const categoryScrollerRef = useRef(null);
 
   const categoryCounts = useMemo(() => {
     return perfumes.reduce((acc, perfume) => {
@@ -67,6 +68,23 @@ export default function Catalog() {
     window.addEventListener('iker:set-category', handler);
     return () => window.removeEventListener('iker:set-category', handler);
   }, []);
+
+  useEffect(() => {
+    const scroller = categoryScrollerRef.current;
+    if (!scroller || !window.matchMedia('(max-width: 640px)').matches) return;
+
+    const activeButton = scroller.querySelector(`[data-category="${activeCategory}"]`);
+    if (!activeButton) return;
+
+    const nextLeft = activeButton.offsetLeft - (scroller.clientWidth - activeButton.offsetWidth) / 2;
+    scroller.scrollTo({
+      left: Math.max(0, nextLeft),
+      behavior: 'smooth',
+    });
+
+    document.documentElement.scrollLeft = 0;
+    document.body.scrollLeft = 0;
+  }, [activeCategory]);
 
   const activeDescription = CATEGORIES.find((category) => category.id === activeCategory)?.description;
   const handleCategorySelect = (categoryId) => {
@@ -107,17 +125,19 @@ export default function Catalog() {
         </motion.div>
 
         <div className="mb-8 sm:mb-12">
-          <div className="category-scroll liquid-glass mx-auto flex w-full max-w-[calc(100vw-2rem)] gap-2 overflow-x-auto rounded-full p-1.5 sm:w-fit sm:max-w-fit sm:justify-center sm:flex-wrap">
+          <div className="category-scroll-wrap mx-auto max-w-[calc(100vw-2rem)] sm:max-w-fit">
+            <div
+              ref={categoryScrollerRef}
+              className="category-scroll liquid-glass flex w-full gap-2 overflow-x-auto rounded-full p-1.5 sm:w-fit sm:max-w-fit sm:justify-center sm:flex-wrap"
+            >
             {CATEGORIES.map((category) => {
               const count = categoryCounts[category.id] || 0;
               const active = activeCategory === category.id;
               return (
                 <button
                   key={category.id}
-                  onPointerDown={(event) => {
-                    event.preventDefault();
-                    handleCategorySelect(category.id);
-                  }}
+                  type="button"
+                  data-category={category.id}
                   onClick={() => handleCategorySelect(category.id)}
                   className={`mobile-category-tab inline-flex min-w-0 items-center justify-center rounded-full border px-4 py-2.5 font-sans text-[10px] uppercase tracking-[0.18em] transition-all duration-300 sm:flex-shrink-0 sm:px-5 ${
                     active
@@ -132,6 +152,7 @@ export default function Catalog() {
                 </button>
               );
             })}
+            </div>
           </div>
           <p className="mobile-copy mt-3 text-center font-body text-sm sm:text-base italic text-white/35">
             {activeDescription}
