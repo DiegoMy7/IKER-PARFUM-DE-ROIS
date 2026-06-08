@@ -114,7 +114,7 @@ export default function Hero() {
           className="mt-10 sm:mt-16 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:justify-center sm:gap-12"
         >
           {[
-            { value: '62+', label: 'Fragancias' },
+            { value: '69+', label: 'Fragancias' },
             { value: '4', label: 'Familias' },
             { value: '100%', label: 'Original' },
           ].map((stat) => (
